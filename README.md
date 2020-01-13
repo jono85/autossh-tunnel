@@ -17,7 +17,7 @@ docker run \
 	-p 3306:3306 \ 
 	-v ./config:/config \ 
 	-dit \ 
-	autotun:latest
+	jono85/autossh-tunnel:latest
 ```
 
 

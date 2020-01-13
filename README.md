@@ -8,6 +8,7 @@ Then to use the container as a proxy in your network publish the ports in your d
 ## example
 Using the example config in source repository "config" directory, you would run the container like this:
 
+```console
 docker run \ 
 	--name autossh-tunnel \ 
 	--restart always \ 
@@ -17,6 +18,8 @@ docker run \
 	-v ./config:/config \ 
 	-dit \ 
 	autotun:latest
+```
+
 
 | switch  | usage |
 | ------------- | ------------- |

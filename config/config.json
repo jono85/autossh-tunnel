@@ -1,0 +1,32 @@
+[
+  {
+    "tunnelName": "double-psql-tunnel",
+    "sshHostName": "ssh.example1.com",
+    "sshPort": 22,
+    "sshUsername": "example1-user",
+    "sshPrivateKeyFile": "example1-user.privkey.pem",
+    "tunnels": [
+      {
+        "localPort": 5432,
+        "destination": "postgres.server.com:5432"
+      },
+      {
+        "localPort": 5433,
+        "destination": "10.20.30.40:5432"
+      }
+    ]
+  },
+  {
+    "tunnelName": "mysql-tunnel",
+    "sshHostName": "ssh.example2.net",
+    "sshPort": 22,
+    "sshUsername": "example2",
+    "sshPrivateKeyFile": "example2-user.privkey.pem",
+    "tunnels": [
+      {
+        "localPort": 3306,
+        "destination": "192.168.100.200:3306"
+      }
+    ]
+  }
+]

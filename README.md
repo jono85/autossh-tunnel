@@ -5,17 +5,17 @@ Docker container allowing you to set up persistent SSH tunnels from your network
 To use the container you need to mount a volume with config json file and private keys for the SSH connections.
 Then to use the container as a proxy in your network publish the ports in your docker run command.
 
-##example
+## example
 Using the example config in source repository "config" directory, you would run the container like this:
 
-docker run \
-	--name autossh-tunnel \
-	--restart always \
-	-p 5432:5432 \
-	-p 5433:5433 \
-	-p 3306:3306 \
-	-v ./config:/config \
-	-dit \
+docker run \\
+	--name autossh-tunnel \\
+	--restart always \\
+	-p 5432:5432 \\
+	-p 5433:5433 \\
+	-p 3306:3306 \\
+	-v ./config:/config \\
+	-dit \\
 	autotun:latest
 
 | switch  | usage |
